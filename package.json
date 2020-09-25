@@ -1,6 +1,6 @@
 {
   "name": "vue-touch-scrollbar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue directive to create touch scrolling container with custom scrollbar and autoscrolling",
   "main": "dist/vue-touch-scrollbar.js",
   "scripts": {
