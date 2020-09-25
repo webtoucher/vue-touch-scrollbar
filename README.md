@@ -14,8 +14,8 @@ npm install --save vue-touch-scrollbar
 
 ``` js
 import Vue from 'vue'
-
 import VueTouchScrollbar from 'vue-touch-scrollbar'
+
 Vue.use(VueTouchScrollbar)
 ```
 
