@@ -5,16 +5,16 @@
  * @file vue-touch-scrollbar plugin definition
  */
 
-import vTouchScrollbar from './directives/v-touch-scrollbar.js';
+import vTouchScrollbar from './directives/v-touch-scrollbar.js'
 
 var VueTouchScrollbar = {
-  install: (Vue, options) => {
-    Vue.directive('touch-scrollbar', vTouchScrollbar)
-  }
-};
+    install: (Vue, options) => {
+        Vue.directive('touch-scrollbar', vTouchScrollbar)
+    },
+}
 
-export default VueTouchScrollbar;
+export default VueTouchScrollbar
 
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueTouchScrollbar)
+    window.Vue.use(VueTouchScrollbar)
 }
