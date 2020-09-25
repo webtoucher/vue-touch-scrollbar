@@ -1,0 +1,38 @@
+{
+  "name": "vue-touch-scrollbar",
+  "version": "0.1.0",
+  "description": "Vue directive to create touch scrolling container with custom scrollbar and autoscrolling",
+  "main": "dist/vue-touch-scrollbar.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webtoucher/vue-touch-scrollbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webtoucher/vue-touch-scrollbar/issues"
+  },
+  "homepage": "https://github.com/webtoucher/vue-touch-scrollbar#readme",
+  "keywords": [
+    "vue",
+    "vue-directive",
+    "scroll",
+    "scrollbar",
+    "autoscroll",
+    "chat",
+    "room"
+  ],
+  "author": "Alexey Kuznetsov",
+  "license": "BSD 3-Clause",
+  "peerDependencies": {
+    "vue": "^2.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^2.3.3",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
