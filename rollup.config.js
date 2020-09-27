@@ -3,11 +3,11 @@ import resolve from '@rollup/plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 
 export default {
-    input: './src/vue-touch-scrollbar.js',
+    input: './src/vue-touch-scrollbox.js',
     output: {
-        file: './dist/vue-touch-scrollbar.js',
+        file: './dist/vue-touch-scrollbox.js',
         format: 'umd',
-        name: 'vue-touch-scrollbar',
+        name: 'vue-touch-scrollbox',
     },
     plugins: [
         resolve(),

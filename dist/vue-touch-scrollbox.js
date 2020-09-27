@@ -4,15 +4,15 @@
         : typeof define === 'function' && define.amd
         ? define(factory)
         : ((global = typeof globalThis !== 'undefined' ? globalThis : global || self),
-          (global['vue-touch-scrollbar'] = factory()))
+          (global['vue-touch-scrollbox'] = factory()))
 })(this, function () {
     'use strict'
 
     /**
-     * @name VueJS vTouchScrollbar (vue-touch-scrollbar)
+     * @name VueJS vTouchScrollbox (vue-touch-scrollbox)
      * @description Monitors an element and scrolls to the bottom if a new child is added
      * @author Alexey Kuznetsov <mirakuru@webtoucher.ru>
-     * @file v-touch-scrollbar  directive definition
+     * @file v-touch-scrollbox  directive definition
      */
     const scrollToBottom = (el, smooth) => {
         if (typeof el.scroll === 'function') {
@@ -25,14 +25,14 @@
         }
     }
 
-    const vTouchScrollbar = {
+    const vTouchScrollbox = {
         bind: (el, binding) => {
             let scrolled = false
             el.addEventListener('scroll', e => {
                 scrolled = el.scrollTop + el.clientHeight + 1 < el.scrollHeight
 
                 if (scrolled && el.scrollTop === 0) {
-                    el.dispatchEvent(new Event('v-touch-scrollbar-top-reached'))
+                    el.dispatchEvent(new Event('v-touch-scrollbox-top-reached'))
                 }
             })
             new MutationObserver(e => {
@@ -68,20 +68,20 @@
     }
 
     /**
-     * @name VueJS vTouchScrollbar (vue-touch-scrollbar)
+     * @name VueJS vTouchScrollbox (vue-touch-scrollbox)
      * @description Monitors an element and scrolls to the bottom if a new child is added
      * @author Alexey Kuznetsov <mirakuru@webtoucher.ru>
-     * @file vue-touch-scrollbar plugin definition
+     * @file vue-touch-scrollbox plugin definition
      */
-    var VueTouchScrollbar = {
+    var VueTouchScrollbox = {
         install: (Vue, options) => {
-            Vue.directive('touch-scrollbar', vTouchScrollbar)
+            Vue.directive('touch-scrollbox', vTouchScrollbox)
         },
     }
 
     if (typeof window !== 'undefined' && window.Vue) {
-        window.Vue.use(VueTouchScrollbar)
+        window.Vue.use(VueTouchScrollbox)
     }
 
-    return VueTouchScrollbar
+    return VueTouchScrollbox
 })
